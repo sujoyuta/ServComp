@@ -1,5 +1,55 @@
-Hello world 
+*****************************************
+SERVICE COMPOSITION FRAMEWORK FOR ANDROID
+*****************************************
 
-12345
+-------------
+Project Scope:
+--------------
 
-change
+The project will focus on developing a service composition framework for Android.
+We would like to have a framework that is able to do the following things
+
+1) Detect what are the services available to offer.
+2) Keeps track of a database of users (bluetooth paired devices).
+3) Runs an android service to deal with opportunistic bluetooth communication
+   with the users in the vicinity.
+4) The android service in 3) will be responsible for appropriate file transfers.
+   These files could be of two types. Request & result files. 
+5) Finally we'd like the users to enjoy the marvels of opportunistic (ahem ahem) 
+   service  composition :P  
+
+
+
+---------
+Platform:
+---------
+
+Android 2.1 update 1
+
+------------------
+Services to offer:
+------------------
+
+We'd like the services (not to be confused by Android background service for
+managing connection threads) to have a plug and play feature. This should 
+allow us to scale the number of services later on and simply add them to the 
+core of the app.
+
+Services should have :
+1) A certain meta data associated with them. The following was drafted after a
+   useful discussion with Sujoy. 
+	Meta-data: (XML file maybe)
+	---------
+	These can be, but not limited to  
+		1) Unique service identifier
+		2) A name as a 'string'
+		3) Estimated time to offer this service e.g if its a compression service
+			we would have t = f(x) ; where x is the i/p file size of the file to 
+			compress and t shall be the time it takes to compress this file.
+			This can be useful in the case when a particular device is overloaded 
+			and cannot handle further compression etc. requests.
+	 	
+2) Should have a common interface to talk to the core
+	(I am unsure of this for now as to what exactly would be the interface)
+
+
