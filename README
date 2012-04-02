@@ -52,4 +52,5 @@ Services should have :
 2) Should have a common interface to talk to the core
 	(I am unsure of this for now as to what exactly would be the interface)
 
-*test
+
+abc
